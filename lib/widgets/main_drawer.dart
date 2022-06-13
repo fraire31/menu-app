@@ -32,7 +32,27 @@ class MainDrawer extends StatelessWidget {
           child: Column(
         children: [
           DrawerHeader(
-            child: null,
+            child: SizedBox(
+              width: double.infinity,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    'Menu app',
+                    style: TextStyle(fontSize: 24),
+                  ),
+                  Row(
+                    children: const [
+                      Expanded(child: Icon(Icons.star)),
+                      Expanded(child: Icon(Icons.star)),
+                      Expanded(child: Icon(Icons.star)),
+                      Expanded(child: Icon(Icons.star)),
+                      Expanded(child: Icon(Icons.star)),
+                    ],
+                  )
+                ],
+              ),
+            ),
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.secondary,
             ),

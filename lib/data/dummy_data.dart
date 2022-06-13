@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../models/category.dart';
 import '../models/meal.dart';
 
@@ -142,7 +143,7 @@ final dummyMeals = [
       'Form 2 patties',
       'Fry the patties for c. 4 minutes on each side',
       'Quickly fry the buns for c. 1 minute on each side',
-      'Bruch buns with ketchup',
+      'Brunch buns with ketchup',
       'Serve burger with tomato, cucumber and onion'
     ],
     isGlutenFree: false,
