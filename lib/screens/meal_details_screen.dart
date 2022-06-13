@@ -68,7 +68,9 @@ class MealDetailsScreen extends StatelessWidget {
     }
 
     return Scaffold(
-      appBar: AppBar(title: Text(selectedMeal.title)),
+      appBar: AppBar(
+        title: Text(selectedMeal.title),
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [

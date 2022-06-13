@@ -9,10 +9,12 @@ import '../screens/meal_details_screen.dart';
 import '../screens/tabs_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   State<MyApp> createState() => _MyAppState();
 }
@@ -36,7 +38,6 @@ class _MyAppState extends State<MyApp> {
     setState(() {
       _filters = filterData;
 
-      print('setting filters in main dart');
       _availableMeals = dummyMeals.where((meal) {
         if (_filters['gluten']! && !meal.isGlutenFree) {
           return false;
@@ -50,7 +51,7 @@ class _MyAppState extends State<MyApp> {
           return false;
         }
 
-        if (_filters['vegan']! && !meal.isVegetarian) {
+        if (_filters['vegetarian']! && !meal.isVegetarian) {
           return false;
         }
 
@@ -80,6 +81,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Deli Meals',
       theme: ThemeData(
         fontFamily: 'Raleway',
@@ -107,7 +109,7 @@ class _MyAppState extends State<MyApp> {
       routes: {
         TabsScreen.pageId: (context) =>
             TabsScreen(favoriteMeals: _favoriteMeals),
-        CategoriesScreen.pageId: (context) => CategoriesScreen(),
+        CategoriesScreen.pageId: (context) => const CategoriesScreen(),
         CategoryMealsScreen.pageId: (context) =>
             CategoryMealsScreen(availableMeals: _availableMeals),
         MealDetailsScreen.pageId: (context) => MealDetailsScreen(

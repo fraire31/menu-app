@@ -1,20 +1,24 @@
 # Menu App
 
-## Getting Started
+## About
 
 Menu app is a beginner Flutter app created to get familiar with some common widgets like 
-Cards, BottomNavigationBar, Drawer, FloatingActionButton, ThemeData, ListView.
+Cards, CircleAvatar, Drawer, FloatingActionButton, ThemeData, ListView.
 
-## Widgets
-Cards
-BottomNavigationBar
-Drawer
-FloatingActionButton
-ThemeData
-ListView
-ListTile
-CircleAvatar
-FittedBox
-SingleChildScrollView
-SwitchListTile
-GridView# menu-app
+
+### Widgets
+* ThemeData
+* BottomNavigationBar
+* SwitchListTile
+* SingleChildScrollView
+* GridView
+* ListView
+* ListTile
+* Cards
+* Drawer
+* FloatingActionButton
+* CircleAvatar
+* FittedBox
+
+
+
